@@ -7,8 +7,6 @@ axios.defaults.baseURL = 'https://pixabay.com/api/';
 const API_KEY = '38313508-2126fd0af6ce64a4e46169eac';
 
 const formEl = document.querySelector('.search-form');
-// const textInput = document.querySelector('#searchQuery');
-// const searchButton = document.querySelector('#search-button');
 const galleryEl = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.load-more');
 
@@ -111,3 +109,5 @@ function makeGallery(images) {
 
   galleryEl.insertAdjacentHTML('beforeend', markup);
 }
+formEl.addEventListener('submit', onForm);
+loadMoreBtn.addEventListener('click', onLoadMoreBtn);
